@@ -16,10 +16,9 @@ const App = () => {
   const [removeBG, setRemoveBG] = useState(false);
   const [mediaCanPlay, setMediaCanPlay] = useState(false);
   const [renderID, setRenderID] = useState(0);
-  const [bgInputValue] = useState(
-    'url("https://app.heygen.com/icons/heygen/logo_hori_text_light_bg.svg")'
-  );
 
+  const bgInputValue =
+    'url("https://app.heygen.com/icons/heygen/logo_hori_text_light_bg.svg")';
   const mediaElement = useRef(null);
   const canvasElement = useRef(null);
   const bgInputRef = useRef(null);
