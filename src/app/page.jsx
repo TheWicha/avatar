@@ -19,6 +19,7 @@ const App = () => {
 
   const bgInputValue =
     'url("https://app.heygen.com/icons/heygen/logo_hori_text_light_bg.svg")';
+
   const mediaElement = useRef(null);
   const canvasElement = useRef(null);
   const bgInputRef = useRef(null);
