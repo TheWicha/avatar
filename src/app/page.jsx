@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { hideElement, showElement } from "./utils/domUtils";
 import { heygen_API } from "../config/apiConfig";
 import { useHandleMediaMetadata } from "./hooks/useHandleMediaMetadata";
@@ -16,7 +16,9 @@ const App = () => {
   const [removeBG, setRemoveBG] = useState(false);
   const [mediaCanPlay, setMediaCanPlay] = useState(false);
   const [renderID, setRenderID] = useState(0);
-  const [bgInputValue, setBGInputValue] = useState(false);
+  const [bgInputValue] = useState(
+    'url("https://app.heygen.com/icons/heygen/logo_hori_text_light_bg.svg")'
+  );
 
   const mediaElement = useRef(null);
   const canvasElement = useRef(null);
@@ -326,12 +328,7 @@ const App = () => {
 
           <label>
             Background (CSS)
-            <input
-              ref={bgInputRef}
-              type="text"
-              value='url("https://app.heygen.com/icons/heygen/logo_hori_text_light_bg.svg")'
-              readOnly
-            />
+            <input ref={bgInputRef} type="text" value={bgInputValue} readOnly />
           </label>
         </div>
       </div>
